@@ -47,7 +47,7 @@ The PowerSim file is split into smaller files via the unix "split" command as so
 
 You must rejoin these files to recreate the full simulation binary in order to run the simulation:
 
-`cat WEST.sip.* > WEST.sip'
+`cat WEST.sip.* > WEST.sip`
 
 ### License
 Copyright 2017 Battelle Energy Alliance, LLC
