@@ -29,7 +29,16 @@ Land use is an important input to water quality of the model. In each farming re
 
 6. Phosphorus is treated in the WEST model as a module, connecting to the existing WEST components through stream flows, total irrigated area of each sub-watershed, reservoir volume, aquifer volume, crop types, irrigation timing, and weather information such as air temperature and precipitation. The component structure of WEST is maintained in the Phosphorus module by having separate components for Phosphorus in soil, ground water, reservoir, and stream. 
 Phosphorus pathways in the environment are complex. For sub-watersheds with agriculture such as Barley Falls, Open Plains and Bustling City, phosphorus from fertilizers leaves soil in both soluble form and particles. The pathways include surface water runoff, water sediment, windborne sediment, and ground water leachate. Phosphorus in water returns to soil through both surface and ground water irrigation, except for Bustling City where ground water comes from another watershed. Phosphorus in ground water and surface water interacts where ground water feeds into stream such as Upper Aquifer feeding Barley Springs and Lower Aquifer feeding King Springs.
- 
+
+## Using The Simulation
+
+The PowerSim file is split into smaller files via the unix "split" command as so:
+
+`split -b 99m WEST.sip WEST.sip.`
+
+You must rejoin these files to recreate the full simulation binary in order to run the simulation:
+
+`cat WEST.sip.* > WEST.sip`
 
 ### Other Software
 Idaho National Laboratory is a cutting edge research facility which is a constantly producing high quality research and software. Feel free to take a look at our other software and scientific offerings at:
@@ -41,16 +50,6 @@ Idaho National Laboratory is a cutting edge research facility which is a constan
 [Raw Experiment Open Source Software](https://github.com/IdahoLabResearch)
 
 [Unsupported Open Source Software](https://github.com/IdahoLabCuttingBoard)
-
-## Using The Simulation
-
-The PowerSim file is split into smaller files via the unix "split" command as so:
-
-`split -b 99m WEST.sip WEST.sip.`
-
-You must rejoin these files to recreate the full simulation binary in order to run the simulation:
-
-`cat WEST.sip.* > WEST.sip`
 
 ### License
 Copyright 2017 Battelle Energy Alliance, LLC
